@@ -1,0 +1,115 @@
+--------------------------------------------------
+1. NON-ORTHOGONALITY (> 70°)
+--------------------------------------------------
+Meaning:
+Cells are poorly aligned with each other, causing numerical errors.
+
+If violated:
+- Increase nNonOrthogonalCorrectors (1–3) in fvSolution
+- Improve mesh alignment with flow direction
+- Refine geometry regions with high curvature
+- Use smoother transitions in snappyHexMesh
+
+--------------------------------------------------
+2. SKEWNESS (> 4 internal, > 20 boundary)
+--------------------------------------------------
+Meaning:
+Cells are distorted and can degrade accuracy.
+
+If violated:
+- Reduce refinement levels
+- Improve surface snapping
+- Adjust castellatedMeshControls
+
+--------------------------------------------------
+3. INTERPOLATION WEIGHTS (< 0.05)
+--------------------------------------------------
+Meaning:
+Poor interpolation between neighboring cells (VERY IMPORTANT).
+
+If violated:
+- Increase nCellsBetweenLevels (e.g., 3 → 5)
+- Smooth refinement transitions
+- Avoid sudden jumps in cell size
+
+--------------------------------------------------
+4. TET QUALITY (< 1e-15)
+--------------------------------------------------
+Meaning:
+Degenerate or poorly shaped cells.
+
+If violated:
+- Improve geometry quality (STL cleanup)
+- Reduce excessive refinement
+- Check snapping parameters
+
+--------------------------------------------------
+5. FACE PYRAMID VOLUME (< 1e-13)
+--------------------------------------------------
+Meaning:
+Collapsed or nearly zero-volume cells.
+
+If violated:
+- Fix geometry
+- Improve mesh resolution consistency
+
+--------------------------------------------------
+6. CONCAVITY (> 80°)
+--------------------------------------------------
+Meaning:
+Cells are inward-bent and unstable.
+
+If violated:
+- Improve snapping
+- Smooth geometry transitions
+
+--------------------------------------------------
+7. VOLUME RATIO (< 0.01)
+--------------------------------------------------
+Meaning:
+Large difference between neighboring cell sizes.
+
+If violated:
+- Smooth refinement transitions
+- Increase nCellsBetweenLevels
+
+--------------------------------------------------
+8. FACE TWIST (< 0.02)
+--------------------------------------------------
+Meaning:
+Twisted faces reduce accuracy.
+
+If violated:
+- Improve mesh quality near curved surfaces
+
+--------------------------------------------------
+9. CELL DETERMINANT (< 0.001)
+--------------------------------------------------
+Meaning:
+Near-inverted or invalid cells.
+
+If violated:
+- Remesh immediately (critical issue)
+
+--------------------------------------------------
+IMPORTANT (NOT CHECKED BY checkMesh)
+--------------------------------------------------
+
+1. Boundary Layer (CRITICAL)
+- Ensure proper prism layers
+- Check y+ values
+- Maintain smooth growth rate (1.2–1.3)
+
+2. Mesh Independence
+- Run multiple mesh densities
+- Compare results (lift, drag, pressure)
+
+3. Flow Physics Alignment
+- Refine:
+  * Leading edges
+  * Wake region
+  * High-gradient zones
+
+4. Aspect Ratio
+- Avoid extremely stretched cells unless in boundary layers
+

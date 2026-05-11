@@ -1,0 +1,5 @@
+vendor/openfoam/
+workspace/
+__pycache__/
+*.pyc
+samples/openfoam_case/constant/polyMesh/

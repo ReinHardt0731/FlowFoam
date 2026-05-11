@@ -1,0 +1,78 @@
+#!/bin/sh
+set -e
+MAX_CORES=4
+SNAPPY_MODE="On"
+MIN_CELLS_PER_CORE=50000
+
+MPI_LAUNCHER=""
+MPI_NP_FLAG="-np"
+if command -v mpirun >/dev/null 2>&1; then
+    MPI_LAUNCHER=mpirun
+elif command -v mpiexec >/dev/null 2>&1; then
+    MPI_LAUNCHER=mpiexec
+    MPI_NP_FLAG="-n"
+fi
+
+recommend_cores() {
+    n_cells=$1
+    cores=$(( n_cells / MIN_CELLS_PER_CORE ))
+    if [ "$cores" -lt 2 ]; then
+        echo 1
+        return
+    fi
+    if [ "$cores" -gt "$MAX_CORES" ]; then
+        cores=$MAX_CORES
+    fi
+    echo "$cores"
+}
+
+extract_cells() {
+    if [ ! -f "$1" ]; then
+        echo 0
+        return
+    fi
+    cells=$(grep -E "cells:[[:space:]]*[0-9]+" "$1" | tail -1 | sed -E 's/.*cells:[[:space:]]*([0-9]+).*/\1/')
+    if [ -z "$cells" ]; then
+        echo 0
+        return
+    fi
+    echo "$cells"
+}
+
+blockMesh
+SNAPPY_CORES=$MAX_CORES
+if [ "$SNAPPY_CORES" -ge 2 ] && [ -z "$MPI_LAUNCHER" ]; then
+    echo "MPI launcher not found (mpirun/mpiexec). Running snappyHexMesh in serial."
+    SNAPPY_CORES=1
+fi
+surfaceFeatureExtract
+if [ "$SNAPPY_CORES" -ge 2 ]; then
+    sed -i -E "s/^(numberOfSubdomains[[:space:]]+)[0-9]+;/\1${SNAPPY_CORES};/" system/decomposeParDict
+    decomposePar -force
+    $MPI_LAUNCHER $MPI_NP_FLAG "$SNAPPY_CORES" snappyHexMesh -overwrite -parallel
+    reconstructParMesh -constant
+    rm -rf processor*
+else
+    snappyHexMesh -overwrite
+fi
+if grep -q "aircraft_" constant/polyMesh/boundary; then
+    echo "Merging aircraft_* patches into aircraft via createPatch"
+    createPatch -overwrite
+fi
+checkMesh -meshQuality | tee log.checkMesh
+NCELLS=$(extract_cells log.checkMesh)
+CORES=$(recommend_cores "$NCELLS")
+echo "Mesh cells: $NCELLS | recommended cores: $CORES (max $MAX_CORES)"
+if [ "$CORES" -ge 2 ] && [ -z "$MPI_LAUNCHER" ]; then
+    echo "MPI launcher not found (mpirun/mpiexec). Running solver in serial."
+    CORES=1
+fi
+if [ "$CORES" -ge 2 ]; then
+    sed -i -E "s/^(numberOfSubdomains[[:space:]]+)[0-9]+;/\1${CORES};/" system/decomposeParDict
+    decomposePar -force
+    $MPI_LAUNCHER $MPI_NP_FLAG "$CORES" simpleFoam -parallel
+    reconstructPar -latestTime
+    rm -rf processor*
+else
+    simpleFoam
+fi

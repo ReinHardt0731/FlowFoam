@@ -1,0 +1,2415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1097</width>
+    <height>702</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_8">
+    <item row="0" column="0">
+     <widget class="QFrame" name="ribbon_frame">
+      <property name="visible">
+       <bool>false</bool>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_ribbon_frame">
+       <property name="leftMargin">
+        <number>8</number>
+       </property>
+       <property name="topMargin">
+        <number>8</number>
+       </property>
+       <property name="rightMargin">
+        <number>8</number>
+       </property>
+       <property name="bottomMargin">
+        <number>8</number>
+       </property>
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <item>
+        <widget class="QTabWidget" name="ribbon_tabs">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <property name="documentMode">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="ribbon_home_tab">
+          <attribute name="title">
+           <string>Home</string>
+          </attribute>
+          <layout class="QHBoxLayout" name="horizontalLayout_ribbon_home">
+           <property name="spacing">
+            <number>8</number>
+           </property>
+           <item>
+            <widget class="QGroupBox" name="group_ribbon_home_case">
+             <property name="title">
+              <string>Case</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_ribbon_home_case">
+              <item row="0" column="0">
+               <widget class="QPushButton" name="btn_ribbon_import_case">
+                <property name="text">
+                 <string>Import Case</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QPushButton" name="btn_ribbon_load_geometry">
+                <property name="text">
+                 <string>Load Geometry</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QPushButton" name="btn_ribbon_save_config">
+                <property name="text">
+                 <string>Save Config</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QPushButton" name="btn_ribbon_load_config">
+                <property name="text">
+                 <string>Load Config</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QPushButton" name="btn_ribbon_export_case">
+                <property name="text">
+                 <string>Export Case</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QPushButton" name="btn_ribbon_open_case_folder">
+                <property name="text">
+                 <string>Open Folder</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="group_ribbon_home_workspace">
+             <property name="title">
+              <string>Workspace</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_ribbon_home_workspace">
+              <item row="0" column="0">
+               <widget class="QPushButton" name="btn_ribbon_toggle_tree">
+                <property name="text">
+                 <string>Tree</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QPushButton" name="btn_ribbon_toggle_properties">
+                <property name="text">
+                 <string>Properties</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QPushButton" name="btn_ribbon_toggle_task">
+                <property name="text">
+                 <string>Task Panel</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QPushButton" name="btn_ribbon_show_console">
+                <property name="text">
+                 <string>Console</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1" colspan="2">
+               <widget class="QPushButton" name="btn_ribbon_reset_layout">
+                <property name="text">
+                 <string>Reset Layout</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="group_ribbon_home_camera">
+             <property name="title">
+              <string>Camera</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_ribbon_home_camera">
+              <item row="0" column="0">
+               <widget class="QPushButton" name="btn_ribbon_reset_camera">
+                <property name="text">
+                 <string>Reset Camera</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QPushButton" name="btn_ribbon_view_front">
+                <property name="text">
+                 <string>Front</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QPushButton" name="btn_ribbon_view_top">
+                <property name="text">
+                 <string>Top</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QPushButton" name="btn_ribbon_view_side">
+                <property name="text">
+                 <string>Side</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_ribbon_home">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="ribbon_mesh_tab">
+          <attribute name="title">
+           <string>Mesh</string>
+          </attribute>
+          <layout class="QHBoxLayout" name="horizontalLayout_ribbon_mesh">
+           <property name="spacing">
+            <number>8</number>
+           </property>
+           <item>
+            <widget class="QGroupBox" name="group_ribbon_mesh_panels">
+             <property name="title">
+              <string>Setup Panels</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_ribbon_mesh_panels">
+              <item row="0" column="0">
+               <widget class="QPushButton" name="btn_ribbon_show_geometry_panel">
+                <property name="text">
+                 <string>Geometry</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QPushButton" name="btn_ribbon_show_mesh_panel">
+                <property name="text">
+                 <string>blockMesh</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QPushButton" name="btn_ribbon_show_snappy_panel">
+                <property name="text">
+                 <string>Snappy</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QPushButton" name="btn_ribbon_show_checkmesh_panel">
+                <property name="text">
+                 <string>CheckMesh</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="group_ribbon_mesh_case">
+             <property name="title">
+              <string>Case Build</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_ribbon_mesh_case">
+              <item row="0" column="0">
+               <widget class="QPushButton" name="btn_ribbon_generate_case">
+                <property name="text">
+                 <string>Generate Case</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QPushButton" name="btn_ribbon_update_case">
+                <property name="text">
+                 <string>Update Case</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QPushButton" name="btn_ribbon_clean_case">
+                <property name="text">
+                 <string>Clean Case</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QPushButton" name="btn_ribbon_mesh_advice">
+                <property name="text">
+                 <string>Mesh Advice</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="group_ribbon_mesh_execute">
+             <property name="title">
+              <string>Run Mesh Stages</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_ribbon_mesh_execute">
+              <item row="0" column="0">
+               <widget class="QPushButton" name="btn_ribbon_run_domain_mesh">
+                <property name="text">
+                 <string>blockMesh</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QPushButton" name="btn_ribbon_run_surface_features">
+                <property name="text">
+                 <string>surfaceFeatureExtract</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QPushButton" name="btn_ribbon_run_snappy_mesh">
+                <property name="text">
+                 <string>snappyHexMesh</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QPushButton" name="btn_ribbon_run_checkmesh">
+                <property name="text">
+                 <string>checkMesh</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_ribbon_mesh">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="ribbon_run_tab">
+          <attribute name="title">
+           <string>Run</string>
+          </attribute>
+          <layout class="QHBoxLayout" name="horizontalLayout_ribbon_run">
+           <property name="spacing">
+            <number>8</number>
+           </property>
+           <item>
+            <widget class="QGroupBox" name="group_ribbon_run_stage">
+             <property name="title">
+              <string>Execution</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_ribbon_run_stage">
+              <item row="0" column="0">
+               <widget class="QLabel" name="lbl_ribbon_solver">
+                <property name="text">
+                 <string>Solver</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QComboBox" name="cmb_ribbon_solver" />
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="lbl_ribbon_stage">
+                <property name="text">
+                 <string>Selected Stage</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QComboBox" name="cmb_ribbon_stage" />
+              </item>
+              <item row="2" column="0">
+               <widget class="QPushButton" name="btn_ribbon_run_selected">
+                <property name="text">
+                 <string>Run Selected</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QPushButton" name="btn_ribbon_run_pipeline">
+                <property name="text">
+                 <string>Run Pipeline</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QPushButton" name="btn_ribbon_run_solve">
+                <property name="text">
+                 <string>Run Solve</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QPushButton" name="btn_ribbon_run_post">
+                <property name="text">
+                 <string>Run Post</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="group_ribbon_run_logs">
+             <property name="title">
+              <string>Logs</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_ribbon_run_logs">
+              <item row="0" column="0">
+               <widget class="QPushButton" name="btn_ribbon_stop_run">
+                <property name="text">
+                 <string>Stop</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QPushButton" name="btn_ribbon_clear_console">
+                <property name="text">
+                 <string>Clear Console</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0" colspan="2">
+               <widget class="QPushButton" name="btn_ribbon_open_latest_log">
+                <property name="text">
+                 <string>Open Latest Log</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="group_ribbon_run_status">
+             <property name="title">
+              <string>Status</string>
+             </property>
+             <layout class="QFormLayout" name="formLayout_ribbon_run_status">
+              <item row="0" column="0">
+               <widget class="QLabel" name="lbl_ribbon_run_status_label">
+                <property name="text">
+                 <string>Run Status</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="lbl_ribbon_run_status_value">
+                <property name="text">
+                 <string>idle</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="lbl_ribbon_active_stage_label">
+                <property name="text">
+                 <string>Active Stage</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLabel" name="lbl_ribbon_active_stage_value">
+                <property name="text">
+                 <string>none</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_ribbon_run">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="ribbon_results_tab">
+          <attribute name="title">
+           <string>Results</string>
+          </attribute>
+          <layout class="QHBoxLayout" name="horizontalLayout_ribbon_results">
+           <property name="spacing">
+            <number>8</number>
+           </property>
+           <item>
+            <widget class="QGroupBox" name="group_ribbon_results_data">
+             <property name="title">
+              <string>Case Data</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_ribbon_results_data">
+              <item row="0" column="0">
+               <widget class="QPushButton" name="btn_ribbon_scan_results">
+                <property name="text">
+                 <string>Scan Results</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QPushButton" name="btn_ribbon_open_paraview">
+                <property name="text">
+                 <string>Open ParaView</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QComboBox" name="cmb_ribbon_vtk_target" />
+              </item>
+              <item row="1" column="1">
+               <widget class="QPushButton" name="btn_ribbon_export_vtk">
+                <property name="text">
+                 <string>Export VTK</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0" colspan="2">
+               <widget class="QPushButton" name="btn_ribbon_load_vtk">
+                <property name="text">
+                 <string>Load VTK</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="group_ribbon_results_fields">
+             <property name="title">
+              <string>Field Display</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_ribbon_results_fields">
+              <item row="0" column="0">
+               <widget class="QPushButton" name="btn_ribbon_result_pressure">
+                <property name="text">
+                 <string>Pressure</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QPushButton" name="btn_ribbon_result_velocity">
+                <property name="text">
+                 <string>Velocity</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0" colspan="2">
+               <widget class="QComboBox" name="cmb_ribbon_result_field" />
+              </item>
+              <item row="2" column="0" colspan="2">
+               <widget class="QPushButton" name="btn_ribbon_apply_field">
+                <property name="text">
+                 <string>Apply Field</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="group_ribbon_results_view">
+             <property name="title">
+              <string>Viewer</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_ribbon_results_view">
+              <item row="0" column="0">
+               <widget class="QPushButton" name="btn_ribbon_surface_mode">
+                <property name="text">
+                 <string>Surface</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QPushButton" name="btn_ribbon_wireframe_mode">
+                <property name="text">
+                 <string>Wireframe</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QPushButton" name="btn_ribbon_toggle_contours">
+                <property name="text">
+                 <string>Contours</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QPushButton" name="btn_ribbon_toggle_slice">
+                <property name="text">
+                 <string>Slice</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QPushButton" name="btn_ribbon_toggle_streamlines">
+                <property name="text">
+                 <string>Streamlines</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QPushButton" name="btn_ribbon_toggle_tripod">
+                <property name="text">
+                 <string>XYZ Tripod</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0" colspan="2">
+               <widget class="QPushButton" name="btn_ribbon_screenshot">
+                <property name="text">
+                 <string>Screenshot</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_ribbon_results">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QFrame" name="viewer_workspace_frame">
+      <property name="visible">
+       <bool>false</bool>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_viewer_workspace">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QWidget" name="viewer_host" native="true" />
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="tabPosition">
+       <enum>QTabWidget::TabPosition::North</enum>
+      </property>
+      <property name="currentIndex">
+       <number>4</number>
+      </property>
+      <widget class="QWidget" name="prelim_tab">
+       <attribute name="title">
+        <string>Preliminary Sizing</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_15">
+        <item row="0" column="0">
+         <widget class="QToolBox" name="toolbox_preliminary_sizing">
+          <property name="currentIndex">
+           <number>5</number>
+          </property>
+          <widget class="QWidget" name="page_constraints">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>628</width>
+             <height>414</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>Constraints</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_6">
+            <item row="17" column="2">
+             <widget class="QLineEdit" name="input_k_ld">
+              <property name="text">
+               <string>10.5</string>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="0">
+             <widget class="QLabel" name="lbl_takeoff_distance">
+              <property name="text">
+               <string>Take off Distance</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="2">
+             <widget class="QLineEdit" name="input_stall_speed" />
+            </item>
+            <item row="18" column="0">
+             <widget class="QLabel" name="lbl_swet_sref_ratio">
+              <property name="text">
+               <string>Swet_Sref Ratio</string>
+              </property>
+             </widget>
+            </item>
+            <item row="8" column="2">
+             <widget class="QLineEdit" name="input_payload_weight" />
+            </item>
+            <item row="9" column="2">
+             <widget class="QLineEdit" name="input_rate_of_climb" />
+            </item>
+            <item row="8" column="0">
+             <widget class="QLabel" name="lbl_payload_weight">
+              <property name="text">
+               <string>Payload Weight</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="3">
+             <widget class="QLabel" name="lbl_maximum_velocity_unit">
+              <property name="text">
+               <string>ft/s</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="lbl_stall_speed">
+              <property name="text">
+               <string>Stall Speed</string>
+              </property>
+             </widget>
+            </item>
+            <item row="14" column="0">
+             <widget class="QLabel" name="lbl_geometric_constraints_section">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>6</width>
+                <height>8</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::Shape::NoFrame</enum>
+              </property>
+              <property name="text">
+               <string>Geometric Constraints</string>
+              </property>
+             </widget>
+            </item>
+            <item row="18" column="2">
+             <widget class="QLineEdit" name="input_swet_sref_ratio" />
+            </item>
+            <item row="5" column="0">
+             <widget class="QLabel" name="lbl_maximum_velocity">
+              <property name="text">
+               <string>Maximum Velocity</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="4">
+             <widget class="QPushButton" name="btn_calculate_constraints">
+              <property name="text">
+               <string>Calculate</string>
+              </property>
+             </widget>
+            </item>
+            <item row="15" column="0" colspan="5">
+             <widget class="Line" name="line_geometric_constraints">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="3">
+             <widget class="QLabel" name="lbl_stall_speed_unit">
+              <property name="text">
+               <string>ft/s</string>
+              </property>
+             </widget>
+            </item>
+            <item row="8" column="3">
+             <widget class="QLabel" name="lbl_payload_weight_unit">
+              <property name="text">
+               <string>lbf</string>
+              </property>
+             </widget>
+            </item>
+            <item row="16" column="2">
+             <widget class="QLineEdit" name="input_aspect_ratio" />
+            </item>
+            <item row="7" column="2">
+             <widget class="QLineEdit" name="input_crew_passenger_weight" />
+            </item>
+            <item row="7" column="0">
+             <widget class="QLabel" name="lbl_crew_passenger_weight">
+              <property name="text">
+               <string>Crew/Passenger's Weight</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="2">
+             <widget class="QLineEdit" name="input_range" />
+            </item>
+            <item row="5" column="2">
+             <widget class="QLineEdit" name="input_maximum_velocity" />
+            </item>
+            <item row="16" column="0">
+             <widget class="QLabel" name="lbl_aspect_ratio">
+              <property name="text">
+               <string>Aspect Ratio</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="3">
+             <widget class="QLabel" name="lbl_endurance_unit">
+              <property name="text">
+               <string>s</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0" colspan="5">
+             <widget class="Line" name="line_performance_constraints">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="lbl_performance_constraints_section">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Performance Constraints</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="3">
+             <widget class="QLabel" name="lbl_crew_passenger_weight_unit">
+              <property name="text">
+               <string>lbf</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="lbl_endurance">
+              <property name="text">
+               <string>Endurance</string>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="3">
+             <widget class="QLabel" name="lbl_takeoff_distance_unit">
+              <property name="text">
+               <string>ft</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="3">
+             <widget class="QLabel" name="lbl_range_unit">
+              <property name="text">
+               <string>ft</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="lbl_range">
+              <property name="text">
+               <string>Range</string>
+              </property>
+             </widget>
+            </item>
+            <item row="17" column="0">
+             <widget class="QLabel" name="label_k_ld">
+              <property name="text">
+               <string>K_LD</string>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="2">
+             <widget class="QLineEdit" name="input_takeoff_distance" />
+            </item>
+            <item row="2" column="1" rowspan="8">
+             <spacer name="verticalSpacer">
+              <property name="orientation">
+               <enum>Qt::Orientation::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="17" column="3">
+             <widget class="QLabel" name="label_k_ld_unit">
+              <property name="text">
+               <string>-</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="2">
+             <widget class="QLineEdit" name="input_endurance" />
+            </item>
+            <item row="12" column="0" colspan="5">
+             <widget class="Line" name="line_before_geometric_constraints">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="10" column="2">
+             <widget class="QLineEdit" name="input_service_ceiling" />
+            </item>
+            <item row="9" column="3">
+             <widget class="QLabel" name="lbl_rate_of_climb_unit">
+              <property name="text">
+               <string>ft/s</string>
+              </property>
+             </widget>
+            </item>
+            <item row="10" column="3">
+             <widget class="QLabel" name="lbl_service_ceiling_unit">
+              <property name="text">
+               <string>ft</string>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="0">
+             <widget class="QLabel" name="lbl_rate_of_climb">
+              <property name="text">
+               <string>Rate of Climb</string>
+              </property>
+             </widget>
+            </item>
+            <item row="10" column="0">
+             <widget class="QLabel" name="lbl_service_ceiling">
+              <property name="text">
+               <string>Service Ceiling</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="page_mission_segment">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>628</width>
+             <height>414</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>Mission Segment</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_3">
+            <item row="0" column="0">
+             <widget class="QColumnView" name="view_mission_segments" />
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="page_initial_weight_estimates">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>628</width>
+             <height>414</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>Initial Weight Estimates</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_page_7">
+            <item>
+             <widget class="QLabel" name="lbl_initial_weight_output">
+              <property name="text">
+               <string>Initial Weight Estimate Output</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTableWidget" name="table_initial_weight_output">
+              <column>
+               <property name="text">
+                <string>Parameter</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Value</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="page_initial_drag_polar">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>611</width>
+             <height>1697</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>Initial Drag Polar Estimate</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_page_4">
+            <item>
+             <widget class="QGroupBox" name="group_xfoil_settings">
+              <property name="title">
+               <string>XFOIL Settings</string>
+              </property>
+              <layout class="QFormLayout" name="form_xfoil_settings">
+               <item row="0" column="0">
+                <widget class="QLabel" name="lbl_xf_re">
+                 <property name="text">
+                  <string>Reynolds Number</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QSpinBox" name="xf_re" />
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="lbl_xf_panels">
+                 <property name="text">
+                  <string>Panels</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QSpinBox" name="xf_panels" />
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="lbl_xf_mach">
+                 <property name="text">
+                  <string>Mach Number</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QDoubleSpinBox" name="xf_mach" />
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="lbl_xf_ncrit">
+                 <property name="text">
+                  <string>Ncrit</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <widget class="QSpinBox" name="xf_ncrit" />
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="lbl_xf_iter">
+                 <property name="text">
+                  <string>Iterations</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
+                <widget class="QSpinBox" name="xf_iter" />
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="group_naca_bounds">
+              <property name="title">
+               <string>NACA 4-Digit Bounds</string>
+              </property>
+              <layout class="QFormLayout" name="form_naca_bounds">
+               <item row="0" column="0">
+                <widget class="QLabel" name="lbl_naca_camber_min">
+                 <property name="text">
+                  <string>Camber Min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QSpinBox" name="naca_camber_min" />
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="lbl_naca_camber_max">
+                 <property name="text">
+                  <string>Camber Max</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QSpinBox" name="naca_camber_max" />
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="lbl_naca_camber_loc_min">
+                 <property name="text">
+                  <string>Camber Loc Min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QSpinBox" name="naca_camber_loc_min" />
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="lbl_naca_camber_loc_max">
+                 <property name="text">
+                  <string>Camber Loc Max</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <widget class="QSpinBox" name="naca_camber_loc_max" />
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="lbl_naca_thickness_min">
+                 <property name="text">
+                  <string>Thickness Min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
+                <widget class="QSpinBox" name="naca_thickness_min" />
+               </item>
+               <item row="5" column="0">
+                <widget class="QLabel" name="lbl_naca_thickness_max">
+                 <property name="text">
+                  <string>Thickness Max</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="1">
+                <widget class="QSpinBox" name="naca_thickness_max" />
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="group_weight_application">
+              <property name="title">
+               <string>Weight Application</string>
+              </property>
+              <layout class="QFormLayout" name="form_weight_application">
+               <item row="1" column="0">
+                <widget class="QLabel" name="lbl_w_cl">
+                 <property name="text">
+                  <string>Weight Cl</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QDoubleSpinBox" name="w_cl" />
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="lbl_w_cd">
+                 <property name="text">
+                  <string>Weight Cd</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QDoubleSpinBox" name="w_cd" />
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="lbl_w_ld">
+                 <property name="text">
+                  <string>Weight L/Dmax</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <widget class="QDoubleSpinBox" name="w_ld" />
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="lbl_w_cm">
+                 <property name="text">
+                  <string>Weight Cm</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
+                <widget class="QDoubleSpinBox" name="w_cm" />
+               </item>
+               <item row="5" column="0">
+                <widget class="QLabel" name="lbl_w_tc">
+                 <property name="text">
+                  <string>Weight t/c</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="1">
+                <widget class="QDoubleSpinBox" name="w_tc" />
+               </item>
+               <item row="7" column="0">
+                <widget class="QLabel" name="lbl_w_aoa">
+                 <property name="text">
+                  <string>Weight AoA Margin</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="7" column="1">
+                <widget class="QDoubleSpinBox" name="w_aoa" />
+               </item>
+               <item row="8" column="0">
+                <widget class="QLabel" name="lbl_ideal_tc">
+                 <property name="text">
+                  <string>Ideal t/c</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="8" column="1">
+                <widget class="QDoubleSpinBox" name="ideal_tc" />
+               </item>
+               <item row="10" column="0">
+                <widget class="QLabel" name="lbl_tc_deviation">
+                 <property name="text">
+                  <string>t/c Deviation</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="10" column="1">
+                <widget class="QDoubleSpinBox" name="tc_deviation" />
+               </item>
+               <item row="11" column="0" colspan="2">
+                <widget class="QLabel" name="lbl_weight_total">
+                 <property name="text">
+                  <string>Total Weight: 1.000</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="12" column="0" colspan="2">
+                <widget class="QMdiArea" name="mdiArea_6">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>500</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="layout_drag_buttons">
+              <item>
+               <widget class="QPushButton" name="btn_run_airfoil_opt">
+                <property name="text">
+                 <string>Run Airfoil Optimization</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_apply_airfoil_weights">
+                <property name="text">
+                 <string>Apply Weights / Rank</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_use_top_airfoil">
+                <property name="text">
+                 <string>Use Top Airfoil</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QTableWidget" name="airfoil_result_table" />
+            </item>
+            <item>
+             <widget class="QLabel" name="lbl_top_airfoil">
+              <property name="text">
+               <string>Top Airfoil: (none)</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="group_drag_polar_estimates">
+              <property name="title">
+               <string>Initial Drag Polar Estimates</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_drag_polar_estimates">
+               <item>
+                <layout class="QFormLayout" name="form_drag_polar_base">
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="lbl_drag_cd0_clean">
+                   <property name="text">
+                    <string>Cd0 clean</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QDoubleSpinBox" name="drag_cd0_clean" />
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QLabel" name="lbl_drag_dcd0_takeoff">
+                   <property name="text">
+                    <string>dCd0 takeoff</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QDoubleSpinBox" name="drag_dcd0_takeoff" />
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QLabel" name="lbl_drag_dcd0_landing">
+                   <property name="text">
+                    <string>dCd0 landing</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="1">
+                  <widget class="QDoubleSpinBox" name="drag_dcd0_landing" />
+                 </item>
+                 <item row="3" column="0">
+                  <widget class="QLabel" name="lbl_drag_mu_ground">
+                   <property name="text">
+                    <string>Ground factor (mu)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="1">
+                  <widget class="QDoubleSpinBox" name="drag_mu_ground" />
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QGridLayout" name="grid_drag_polar_rows">
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="lbl_drag_cfg">
+                   <property name="text">
+                    <string>Config</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QLabel" name="lbl_drag_cl">
+                   <property name="text">
+                    <string>Cl</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="2">
+                  <widget class="QLabel" name="lbl_drag_e">
+                   <property name="text">
+                    <string>Oswald e</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="3">
+                  <widget class="QLabel" name="lbl_drag_k">
+                   <property name="text">
+                    <string>K = 1/(pi*AR*e)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="4">
+                  <widget class="QLabel" name="lbl_drag_cd">
+                   <property name="text">
+                    <string>Cd</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QLabel" name="lbl_drag_clean">
+                   <property name="text">
+                    <string>Clean</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QDoubleSpinBox" name="drag_cl_clean" />
+                 </item>
+                 <item row="1" column="2">
+                  <widget class="QDoubleSpinBox" name="drag_e_clean" />
+                 </item>
+                 <item row="1" column="3">
+                  <widget class="QLineEdit" name="drag_k_clean_out" />
+                 </item>
+                 <item row="1" column="4">
+                  <widget class="QLineEdit" name="drag_cd_clean_out" />
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QLabel" name="lbl_drag_takeoff">
+                   <property name="text">
+                    <string>Takeoff</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="1">
+                  <widget class="QDoubleSpinBox" name="drag_cl_takeoff" />
+                 </item>
+                 <item row="2" column="2">
+                  <widget class="QDoubleSpinBox" name="drag_e_takeoff" />
+                 </item>
+                 <item row="2" column="3">
+                  <widget class="QLineEdit" name="drag_k_takeoff_out" />
+                 </item>
+                 <item row="2" column="4">
+                  <widget class="QLineEdit" name="drag_cd_takeoff_out" />
+                 </item>
+                 <item row="3" column="0">
+                  <widget class="QLabel" name="lbl_drag_landing">
+                   <property name="text">
+                    <string>Landing</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="1">
+                  <widget class="QDoubleSpinBox" name="drag_cl_landing" />
+                 </item>
+                 <item row="3" column="2">
+                  <widget class="QDoubleSpinBox" name="drag_e_landing" />
+                 </item>
+                 <item row="3" column="3">
+                  <widget class="QLineEdit" name="drag_k_landing_out" />
+                 </item>
+                 <item row="3" column="4">
+                  <widget class="QLineEdit" name="drag_cd_landing_out" />
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QFormLayout" name="form_drag_ground">
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="lbl_drag_cd_ground">
+                   <property name="text">
+                    <string>Cd ground-roll estimate (takeoff)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QLineEdit" name="drag_cd_ground_out" />
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <widget class="QPushButton" name="btn_estimate_drag_polar">
+                 <property name="text">
+                  <string>Estimate Drag Polar</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTableWidget" name="drag_estimate_table" />
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="page_wing_power_loading_sizing">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>611</width>
+             <height>451</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>Wing Loading and Power Loading Sizing</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_page_2">
+            <item>
+             <widget class="QGroupBox" name="group_sizing_controls">
+              <property name="title">
+               <string>Sizing Controls</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_sizing_controls">
+               <item>
+                <widget class="QPushButton" name="btn_run_sizing">
+                 <property name="text">
+                  <string>Run Sizing</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="group_sizing_summary">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="title">
+               <string>Sizing Summary</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_16">
+               <item row="0" column="0">
+                <widget class="QTableWidget" name="sizing_summary_table">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <column>
+                  <property name="text">
+                   <string>Parameter</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Value</string>
+                  </property>
+                 </column>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="group_sizing_plot">
+              <property name="title">
+               <string>Wing Loading vs Power Loading</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_sizing_plot">
+               <item>
+                <widget class="QWidget" name="sizing_plot_container" native="true" />
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="group_sizing_stall">
+              <property name="title">
+               <string>Sizing to Stall</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_12">
+               <item row="0" column="0">
+                <widget class="QWidget" name="sizing_stall_plot_container" native="true" />
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="group_sizing_rate_of_climb">
+              <property name="title">
+               <string>Sizing to Rate of Climb</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_13">
+               <item row="0" column="0">
+                <widget class="QWidget" name="sizing_rate_of_climb_plot_container" native="true" />
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="group_sizing_takeoff">
+              <property name="title">
+               <string>Sizing to Take off</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_11">
+               <item row="0" column="0">
+                <widget class="QWidget" name="sizing_takeoff_plot_container" native="true" />
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="group_sizing_service_ceiling">
+              <property name="title">
+               <string>Sizing to Service Ceiling</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_14">
+               <item row="0" column="0">
+                <widget class="QWidget" name="sizing_service_ceiling_plot_container" native="true" />
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="page_v_speeds_empennage">
+           <attribute name="label">
+            <string>V-Speeds and Empennage Sizing</string>
+           </attribute>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="geometry_modeler_tab">
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="tabletTracking">
+        <bool>false</bool>
+       </property>
+       <property name="whatsThis">
+        <string />
+       </property>
+       <attribute name="title">
+        <string>Geometry Modeler</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="aerodynamics_tab">
+       <attribute name="title">
+        <string>Aerodynamics</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="1" column="0">
+         <widget class="QMdiArea" name="mdiArea_2" />
+        </item>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="btn_load_pressure_data">
+          <property name="text">
+           <string>Load Pressure Data</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="structures_tab">
+       <attribute name="title">
+        <string>Structures</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLabel" name="lbl_structures_workspace_title">
+          <property name="text">
+           <string>Structures Workspace</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lbl_structures_workspace_subtitle">
+          <property name="text">
+           <string>Select an item in the left tree to open its structural analysis panel.</string>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lbl_structures_panel_title">
+          <property name="text">
+           <string>External Loads</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QStackedWidget" name="structures_panel_stack" />
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="propulsion_tab">
+       <attribute name="title">
+        <string>Propulsion</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_propulsion">
+        <item>
+         <widget class="QLabel" name="lbl_propulsion_workspace_title">
+          <property name="text">
+           <string>Propulsion Catalog Workspace</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lbl_propulsion_workspace_subtitle">
+          <property name="text">
+           <string>Manage engine and propeller catalogs for concept trade studies.</string>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lbl_propulsion_panel_title">
+          <property name="text">
+           <string>Engine Catalog</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QStackedWidget" name="propulsion_panel_stack" />
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="performance_tab">
+       <attribute name="title">
+        <string>Performance Analysis</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_9">
+        <item row="0" column="0">
+         <widget class="QToolBox" name="toolBox_performance">
+          <property name="currentIndex">
+           <number>3</number>
+          </property>
+          <widget class="QWidget" name="power_required">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>414</width>
+             <height>91</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>Power Required/Thrust Required</string>
+           </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QTableWidget" name="tableWidget">
+              <property name="minimumSize">
+               <size>
+                <width>230</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::Shape::WinPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Shadow::Raised</enum>
+              </property>
+              <property name="rowCount">
+               <number>10</number>
+              </property>
+              <attribute name="horizontalHeaderStretchLastSection">
+               <bool>false</bool>
+              </attribute>
+              <row />
+              <row />
+              <row />
+              <row />
+              <row />
+              <row />
+              <row />
+              <row />
+              <row />
+              <row />
+              <column>
+               <property name="text">
+                <string>Power Req HP</string>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>8</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="textAlignment">
+                <set>AlignJustify|AlignVCenter</set>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Velocity (ft/s)</string>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>8</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="textAlignment">
+                <set>AlignJustify|AlignVCenter</set>
+               </property>
+              </column>
+              <item row="0" column="0">
+               <property name="text">
+                <string />
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>7</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item>
+             <widget class="QMdiArea" name="mdiArea_3" />
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="power_available">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>255</width>
+             <height>89</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>Power Available/Thrust Available</string>
+           </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QTableWidget" name="tableWidget_2" />
+            </item>
+            <item>
+             <widget class="QMdiArea" name="mdiArea" />
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="excess_power">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>255</width>
+             <height>89</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>Excess Power and Climb Performance</string>
+           </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QTableWidget" name="tableWidget_3" />
+            </item>
+            <item>
+             <widget class="QMdiArea" name="mdiArea_4" />
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="service_ceiling">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>628</width>
+             <height>474</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>Service Ceiling and Absolute Ceiling</string>
+           </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <widget class="QTableWidget" name="tableWidget_4" />
+            </item>
+            <item>
+             <widget class="QMdiArea" name="mdiArea_5" />
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="result_tab">
+       <attribute name="title">
+        <string>Result</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0">
+         <widget class="QToolBox" name="toolBox_2">
+          <property name="currentIndex">
+           <number>1</number>
+          </property>
+          <widget class="QWidget" name="page_5">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>98</width>
+             <height>91</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>Metric</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_10">
+            <item row="0" column="0">
+             <widget class="QListWidget" name="listWidget">
+              <item>
+               <property name="text">
+                <string>New Item</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>New Item</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>New Item</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="page_6">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>628</width>
+             <height>534</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>Page 2</string>
+           </attribute>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1097</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew" />
+    <addaction name="actionOpen" />
+    <addaction name="actionExport" />
+    <addaction name="actionImport" />
+    <addaction name="actionSave" />
+    <addaction name="actionSave_As" />
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionUndo" />
+    <addaction name="actionRedo" />
+    <addaction name="actionCopy" />
+    <addaction name="actionPaste" />
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="actionToggle_Tree_View" />
+    <addaction name="actionToggle_Properties" />
+    <addaction name="actionToggle_Task" />
+   </widget>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string>Settings</string>
+    </property>
+    <addaction name="actionPreference_2" />
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionDocumentation" />
+    <addaction name="actionAbout_AerGenesis" />
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <addaction name="actionRecalculate" />
+    <addaction name="actionFind" />
+    <addaction name="actionInspect" />
+   </widget>
+   <addaction name="menuFile" />
+   <addaction name="menuEdit" />
+   <addaction name="menuView" />
+   <addaction name="menuSettings" />
+   <addaction name="menuTools" />
+   <addaction name="menuHelp" />
+  </widget>
+  <widget class="QStatusBar" name="statusbar" />
+  <widget class="QDockWidget" name="tree">
+   <property name="windowTitle">
+    <string>Tree View</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="tree_view_tree">
+    <layout class="QGridLayout" name="gridLayout">
+     <property name="leftMargin">
+      <number>8</number>
+     </property>
+     <property name="topMargin">
+      <number>8</number>
+     </property>
+     <property name="rightMargin">
+      <number>8</number>
+     </property>
+     <property name="bottomMargin">
+      <number>8</number>
+     </property>
+     <property name="spacing">
+      <number>6</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="QTreeView" name="treeView" />
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="properties">
+   <property name="windowTitle">
+    <string>Properties</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="properties_view_prop">
+    <layout class="QGridLayout" name="gridLayout_2">
+     <property name="leftMargin">
+      <number>8</number>
+     </property>
+     <property name="topMargin">
+      <number>8</number>
+     </property>
+     <property name="rightMargin">
+      <number>8</number>
+     </property>
+     <property name="bottomMargin">
+      <number>8</number>
+     </property>
+     <property name="spacing">
+      <number>6</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="QTableView" name="tableView" />
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="task">
+   <property name="floating">
+    <bool>false</bool>
+   </property>
+   <property name="windowTitle">
+    <string />
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="task_view">
+    <layout class="QGridLayout" name="gridLayout_7">
+     <property name="leftMargin">
+      <number>8</number>
+     </property>
+     <property name="topMargin">
+      <number>8</number>
+     </property>
+     <property name="rightMargin">
+      <number>8</number>
+     </property>
+     <property name="bottomMargin">
+      <number>8</number>
+     </property>
+     <property name="spacing">
+      <number>6</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="QTabWidget" name="tabWidget_3">
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="task_task">
+        <attribute name="title">
+         <string>Task</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_task_task">
+         <property name="leftMargin">
+          <number>6</number>
+         </property>
+         <property name="topMargin">
+          <number>6</number>
+         </property>
+         <property name="rightMargin">
+          <number>6</number>
+         </property>
+         <property name="bottomMargin">
+          <number>6</number>
+         </property>
+         <property name="spacing">
+          <number>8</number>
+         </property>
+         <item>
+          <layout class="QFormLayout" name="formLayout">
+           <property name="horizontalSpacing">
+            <number>8</number>
+           </property>
+           <property name="verticalSpacing">
+            <number>6</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="lbl_aero_field">
+             <property name="visible">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Aero Field:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QComboBox" name="cmb_aero_field">
+             <property name="visible">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QPushButton" name="btn_refresh_aero_plot">
+             <property name="visible">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Refresh Plot</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QWidget" name="prelim_task_tools" native="true">
+           <property name="visible">
+            <bool>false</bool>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_prelim_task_tools">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="lbl_prelim_task_tools">
+              <property name="text">
+               <string>Prelim Sketch Tools</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_prelim_snap_grid">
+              <property name="text">
+               <string>Snap Grid: On</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_prelim_snap_endpoint">
+              <property name="text">
+               <string>Snap Endpoint: On</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_prelim_clear_sketch">
+              <property name="text">
+               <string>Clear</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="cfd_console_dock">
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+   <property name="windowTitle">
+    <string>CFD Console</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="QWidget" name="cfd_console_dock_contents">
+    <layout class="QVBoxLayout" name="verticalLayout_cfd_console_dock">
+     <property name="leftMargin">
+      <number>8</number>
+     </property>
+     <property name="topMargin">
+      <number>8</number>
+     </property>
+     <property name="rightMargin">
+      <number>8</number>
+     </property>
+     <property name="bottomMargin">
+      <number>8</number>
+     </property>
+     <property name="spacing">
+      <number>6</number>
+     </property>
+     <item>
+      <widget class="QPlainTextEdit" name="cfd_console_output">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionNew">
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionExport">
+   <property name="text">
+    <string>Export</string>
+   </property>
+  </action>
+  <action name="actionImport">
+   <property name="text">
+    <string>Import</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionSave_As">
+   <property name="text">
+    <string>Save As</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="text">
+    <string>Undo</string>
+   </property>
+  </action>
+  <action name="actionRedo">
+   <property name="text">
+    <string>Redo</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="text">
+    <string>Copy</string>
+   </property>
+  </action>
+  <action name="actionPaste">
+   <property name="text">
+    <string>Paste</string>
+   </property>
+  </action>
+  <action name="actionToggle_Tree_View">
+   <property name="text">
+    <string>Toggle Tree View</string>
+   </property>
+  </action>
+  <action name="actionToggle_Properties">
+   <property name="text">
+    <string>Toggle Properties</string>
+   </property>
+  </action>
+  <action name="actionToggle_Task">
+   <property name="text">
+    <string>Toggle Task</string>
+   </property>
+  </action>
+  <action name="actionPreference">
+   <property name="text">
+    <string>Preference</string>
+   </property>
+  </action>
+  <action name="actionPreference_2">
+   <property name="text">
+    <string>Preference</string>
+   </property>
+  </action>
+  <action name="actionDocumentation">
+   <property name="text">
+    <string>Documentation</string>
+   </property>
+  </action>
+  <action name="actionAbout_AerGenesis">
+   <property name="text">
+    <string>About AerGenesis</string>
+   </property>
+  </action>
+  <action name="actionRefresh">
+   <property name="text">
+    <string>Refresh</string>
+   </property>
+  </action>
+  <action name="actionRecalculate">
+   <property name="text">
+    <string>Recalculate</string>
+   </property>
+  </action>
+  <action name="actionFind">
+   <property name="text">
+    <string>Find</string>
+   </property>
+  </action>
+  <action name="actionInspect">
+   <property name="text">
+    <string>Inspect</string>
+   </property>
+  </action>
+  <zorder>tree</zorder>
+ </widget>
+ <resources />
+ <connections />
+</ui>

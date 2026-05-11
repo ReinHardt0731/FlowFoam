@@ -1,0 +1,372 @@
+[info] Native executable not found in PATH. Running through Windows OpenFOAM bootstrap.
+$ checkMesh -meshQuality
+F:\ResearchFiles\Openfoam\aerodynamics\openfoam\v2412\\msys64\home\ofuser\OpenFOAM\
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : 34e226dfe3-20211220 OPENFOAM=2412 version=v2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : checkMesh -meshQuality
+Date   : Apr 10 2026
+Time   : 23:23:04
+Host   : REXUS
+PID    : 8160
+I/O    : uncollated
+Case   : F:/ResearchFiles/Openfoam/openfoam_case
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Check mesh...
+    Enabling user-defined geometry checks.
+
+Time = 0
+
+Mesh stats 
+    points:           130977
+    faces:            376576
+    internal faces:   360704
+    cells:            122880
+    faces per cell:   6
+    boundary patches: 3
+    point zones:      0
+    face zones:       0
+    cell zones:       0
+
+Overall number of cells of each type:
+    hexahedra:     122880
+    prisms:        0
+    wedges:        0
+    pyramids:      0
+    tet wedges:    0
+    tetrahedra:    0
+    polyhedra:     0
+
+Checking topology...
+    Boundary definition OK.
+    Cell to face addressing OK.
+    Point usage OK.
+    Upper triangular ordering OK.
+    Face vertices OK.
+    Number of regions: 1 (OK).
+
+Checking patch topology for multiply connected surfaces...
+    Patch               Faces    Points     Surface topology
+    inlet               1536     1617     ok (non-closed singly connected)  
+    outlet              1536     1617     ok (non-closed singly connected)  
+    farfield            12800    12960    ok (non-closed singly connected)  
+    ".*"                15872    15874    ok (closed singly connected)      
+
+
+Checking faceZone topology for multiply connected surfaces...
+    No faceZones found.
+
+Checking basic cellZone addressing...
+    No cellZones found.
+
+Checking basic pointZone addressing...
+    No pointZones found.
+
+Checking geometry...
+    Overall domain bounding box (-10 -20 -10) (35 20 10)
+    Mesh has 3 geometric (non-empty/wedge) directions (1 1 1)
+    Mesh has 3 solution (non-empty) directions (1 1 1)
+    Boundary openness (1.1355996e-17 0 -8.2156504e-18) OK.
+    Max cell openness = 2.1316282e-16 OK.
+    Max aspect ratio = 1.4814815 OK.
+    Minimum face area = 0.3515625. Maximum face area = 0.52083334.  Face area magnitudes OK.
+    Min volume = 0.29296875. Max volume = 0.29296875.  Total volume = 36000.  Cell volumes OK.
+    Mesh non-orthogonality Max: 0 average: 0
+    Non-orthogonality check OK.
+    Face pyramids OK.
+    Max skewness = 5.895112e-14 OK.
+    Coupled point location match (average 0) OK.
+Checking faces in error :
+    non-orthogonality > 70  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.05        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+
+Mesh OK.
+
+End
+
+[info] Native executable not found in PATH. Running through Windows OpenFOAM bootstrap.
+$ checkMesh -meshQuality
+F:\ResearchFiles\Openfoam\aerodynamics\openfoam\v2412\\msys64\home\ofuser\OpenFOAM\
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : 34e226dfe3-20211220 OPENFOAM=2412 version=v2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : checkMesh -meshQuality
+Date   : Apr 11 2026
+Time   : 00:39:57
+Host   : REXUS
+PID    : 18364
+I/O    : uncollated
+Case   : F:/ResearchFiles/Openfoam/openfoam_case
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Check mesh...
+    Enabling user-defined geometry checks.
+
+Time = 0
+
+Mesh stats 
+    points:           4247315
+    faces:            11525739
+    internal faces:   11140280
+    cells:            3655610
+    faces per cell:   6.2003384
+    boundary patches: 4
+    point zones:      1
+    face zones:       0
+    cell zones:       0
+
+Overall number of cells of each type:
+    hexahedra:     3180594
+    prisms:        38186
+    wedges:        0
+    pyramids:      0
+    tet wedges:    873
+    tetrahedra:    20
+    polyhedra:     435937
+    Breakdown of polyhedra by number of faces:
+        faces   number of cells
+            4   27850
+            5   20362
+            6   51332
+            7   122447
+            8   37177
+            9   142453
+           10   1324
+           11   413
+           12   25770
+           13   35
+           14   50
+           15   6353
+           16   13
+           17   2
+           18   354
+           21   2
+
+Checking topology...
+    Boundary definition OK.
+    Cell to face addressing OK.
+    Point usage OK.
+    Upper triangular ordering OK.
+    Face vertices OK.
+    Number of regions: 1 (OK).
+
+Checking patch topology for multiply connected surfaces...
+                   Patch    Faces   Points  Surface topology
+                   inlet     1536     1617  ok (non-closed singly connected)
+                  outlet     1536     1617  ok (non-closed singly connected)
+                farfield    12800    12960  ok (non-closed singly connected)
+                aircraft   369587   402525  multiply connected (shared edge)
+                    ".*"   385459   418399  multiply connected (shared edge)
+
+Detected 1 bad edges (possibly relevant for finite-area)
+
+Checking faceZone topology for multiply connected surfaces...
+    No faceZones found.
+  <<Writing 2 conflicting points to set nonManifoldPoints
+
+Checking basic cellZone addressing...
+    No cellZones found.
+
+Checking basic pointZone addressing...
+               PointZone  PointsBoundingBox
+            frozenPoints       0(1e+150 1e+150 1e+150) (-1e+150 -1e+150 -1e+150)
+
+Checking geometry...
+    Overall domain bounding box (-10 -20.000745 -10.000584) (35 20.000745 10.000327)
+    Mesh has 3 geometric (non-empty/wedge) directions (1 1 1)
+    Mesh has 3 solution (non-empty) directions (1 1 1)
+    Boundary openness (-6.4616e-16 -3.8464777e-17 -1.2440917e-15) OK.
+    Max cell openness = 4.3101412e-16 OK.
+    Max aspect ratio = 20.722945 OK.
+    Minimum face area = 6.0368536e-06. Maximum face area = 0.53125554.  Face area magnitudes OK.
+    Min volume = 4.9124693e-08. Max volume = 0.29778868.  Total volume = 35790.927.  Cell volumes OK.
+    Mesh non-orthogonality Max: 69.651668 average: 9.1252569
+    Non-orthogonality check OK.
+    Face pyramids OK.
+ ***Max skewness = 4.1088008, 2 highly skew faces detected which may impair the quality of the results
+  <<Writing 2 skew faces to set skewFaces
+    Coupled point location match (average 0) OK.
+Checking faces in error :
+    non-orthogonality >  70 degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity >  80 degrees                     : 0
+    faces with skewness >   4 (internal) or  20 (boundary) : 0
+    faces with interpolation weights (0..1)  <  0.05       : 4
+    faces with volume ratio of neighbour cells <  0.01     : 0
+    faces with face twist <  0.02                          : 0
+    faces on cells with determinant < 0.001                : 0
+  <<Writing 4 faces in error to set meshQualityFaces
+
+Failed 2 mesh checks.
+
+End
+
+[info] Native executable not found in PATH. Running through Windows OpenFOAM bootstrap.
+$ checkMesh -meshQuality
+F:\ResearchFiles\Openfoam\aerodynamics\openfoam\v2412\\msys64\home\ofuser\OpenFOAM\
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : 34e226dfe3-20211220 OPENFOAM=2412 version=v2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : checkMesh -meshQuality
+Date   : Apr 11 2026
+Time   : 00:41:30
+Host   : REXUS
+PID    : 20812
+I/O    : uncollated
+Case   : F:/ResearchFiles/Openfoam/openfoam_case
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Check mesh...
+    Enabling user-defined geometry checks.
+
+Time = 0
+
+Mesh stats 
+    points:           4247315
+    faces:            11525739
+    internal faces:   11140280
+    cells:            3655610
+    faces per cell:   6.2003384
+    boundary patches: 4
+    point zones:      1
+    face zones:       0
+    cell zones:       0
+
+Overall number of cells of each type:
+    hexahedra:     3180594
+    prisms:        38186
+    wedges:        0
+    pyramids:      0
+    tet wedges:    873
+    tetrahedra:    20
+    polyhedra:     435937
+    Breakdown of polyhedra by number of faces:
+        faces   number of cells
+            4   27850
+            5   20362
+            6   51332
+            7   122447
+            8   37177
+            9   142453
+           10   1324
+           11   413
+           12   25770
+           13   35
+           14   50
+           15   6353
+           16   13
+           17   2
+           18   354
+           21   2
+
+Checking topology...
+    Boundary definition OK.
+    Cell to face addressing OK.
+    Point usage OK.
+    Upper triangular ordering OK.
+    Face vertices OK.
+    Number of regions: 1 (OK).
+
+Checking patch topology for multiply connected surfaces...
+                   Patch    Faces   Points  Surface topology
+                   inlet     1536     1617  ok (non-closed singly connected)
+                  outlet     1536     1617  ok (non-closed singly connected)
+                farfield    12800    12960  ok (non-closed singly connected)
+                aircraft   369587   402525  multiply connected (shared edge)
+                    ".*"   385459   418399  multiply connected (shared edge)
+
+Detected 1 bad edges (possibly relevant for finite-area)
+
+Checking faceZone topology for multiply connected surfaces...
+    No faceZones found.
+  <<Writing 2 conflicting points to set nonManifoldPoints
+
+Checking basic cellZone addressing...
+    No cellZones found.
+
+Checking basic pointZone addressing...
+               PointZone  PointsBoundingBox
+            frozenPoints       0(1e+150 1e+150 1e+150) (-1e+150 -1e+150 -1e+150)
+
+Checking geometry...
+    Overall domain bounding box (-10 -20.000745 -10.000584) (35 20.000745 10.000327)
+    Mesh has 3 geometric (non-empty/wedge) directions (1 1 1)
+    Mesh has 3 solution (non-empty) directions (1 1 1)
+    Boundary openness (-6.4616e-16 -3.8464777e-17 -1.2440917e-15) OK.
+    Max cell openness = 4.3101412e-16 OK.
+    Max aspect ratio = 20.722945 OK.
+    Minimum face area = 6.0368536e-06. Maximum face area = 0.53125554.  Face area magnitudes OK.
+    Min volume = 4.9124693e-08. Max volume = 0.29778868.  Total volume = 35790.927.  Cell volumes OK.
+    Mesh non-orthogonality Max: 69.651668 average: 9.1252569
+    Non-orthogonality check OK.
+    Face pyramids OK.
+ ***Max skewness = 4.1088008, 2 highly skew faces detected which may impair the quality of the results
+  <<Writing 2 skew faces to set skewFaces
+    Coupled point location match (average 0) OK.
+Checking faces in error :
+    non-orthogonality >  70 degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity >  80 degrees                     : 0
+    faces with skewness >   4 (internal) or  20 (boundary) : 0
+    faces with interpolation weights (0..1)  <  0.05       : 4
+    faces with volume ratio of neighbour cells <  0.01     : 0
+    faces with face twist <  0.02                          : 0
+    faces on cells with determinant < 0.001                : 0
+  <<Writing 4 faces in error to set meshQualityFaces
+
+Failed 2 mesh checks.
+
+End
+

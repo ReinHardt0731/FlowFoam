@@ -1,0 +1,311 @@
+{
+  "format": "ad_gui_openfoam_config",
+  "version": 1,
+  "saved_at": "2026-04-04T17:23:10",
+  "openfoam": {
+    "workflow": "simpleFoam",
+    "geometry": {
+      "stl_path": "F:\\aircraft.stl",
+      "tri_surface_name": "aircraft",
+      "scale": 1.0,
+      "patches": {
+        "aircraft": "wall"
+      }
+    },
+    "mesh": {
+      "preset": "External Aerodynamics",
+      "snappy_profile": "Fast",
+      "snappy_parallel_mode": "On",
+      "domain_min": [
+        -10.0,
+        -20.0,
+        -10.0
+      ],
+      "domain_max": [
+        35.0,
+        20.0,
+        10.0
+      ],
+      "base_cells": [
+        80,
+        48,
+        32
+      ],
+      "castellated": true,
+      "snap": true,
+      "layers": true,
+      "refinement_min": 2,
+      "refinement_max": 4,
+      "feature_angle": 30.0,
+      "n_surface_layers": 1,
+      "max_local_cells": 100000,
+      "max_global_cells": 2000000,
+      "min_refinement_cells": 10,
+      "max_load_unbalance": 0.1,
+      "location_in_mesh": [
+        4.0,
+        4.0,
+        0.0
+      ],
+      "allow_free_standing_zone_faces": true,
+      "n_feature_snap_iter": 6,
+      "implicit_feature_snap": false,
+      "explicit_feature_snap": true,
+      "multi_region_feature_snap": false,
+      "expansion_ratio": 1.0,
+      "final_layer_thickness": 0.2,
+      "min_thickness": 0.05,
+      "n_grow": 0,
+      "layer_feature_angle": 60.0,
+      "slip_feature_angle": 30.0,
+      "layer_n_relax_iter": 2,
+      "n_smooth_surface_normals": 1,
+      "n_smooth_normals": 2,
+      "n_smooth_thickness": 6,
+      "max_face_thickness_ratio": 0.6,
+      "max_thickness_to_medial_ratio": 0.5,
+      "min_medial_axis_angle": 90.0,
+      "n_buffer_cells_no_extrude": 0,
+      "n_layer_iter": 20,
+      "merge_tolerance": 1e-06,
+      "refinement_region": {
+        "enabled": true,
+        "min": [
+          -1.0,
+          -15.0,
+          -5.0
+        ],
+        "max": [
+          25.0,
+          15.0,
+          5.0
+        ],
+        "level": 4
+      }
+    },
+    "check_mesh": {
+      "enabled": true,
+      "max_non_ortho": 70.0,
+      "max_boundary_skewness": 20.0,
+      "min_vol": 1e-13
+    },
+    "boundary_conditions": {
+      "patches": {
+        "inlet": {
+          "enabled": true,
+          "type": "patch"
+        },
+        "outlet": {
+          "enabled": true,
+          "type": "patch"
+        },
+        "farfield": {
+          "enabled": true,
+          "type": "farField"
+        },
+        "aircraft": {
+          "enabled": true,
+          "type": "wall"
+        },
+        "symmetry": {
+          "enabled": false,
+          "type": "symmetryPlane"
+        }
+      },
+      "fields": {
+        "U": {
+          "inlet": {
+            "type": "fixedValue",
+            "value": "uniform (50 0 0)"
+          },
+          "outlet": {
+            "type": "inletOutlet",
+            "inlet_value": "uniform (0 0 0)",
+            "value": "$internalField"
+          },
+          "farfield": {
+            "type": "zeroGradient",
+            "value": ""
+          },
+          "aircraft": {
+            "type": "noSlip",
+            "value": "uniform (0 0 0)"
+          },
+          "symmetry": {
+            "type": "symmetryPlane",
+            "value": ""
+          }
+        },
+        "p": {
+          "inlet": {
+            "type": "zeroGradient",
+            "value": ""
+          },
+          "outlet": {
+            "type": "fixedValue",
+            "value": "uniform 0"
+          },
+          "farfield": {
+            "type": "zeroGradient",
+            "value": ""
+          },
+          "aircraft": {
+            "type": "zeroGradient",
+            "value": ""
+          },
+          "symmetry": {
+            "type": "symmetryPlane",
+            "value": ""
+          }
+        },
+        "k": {
+          "inlet": {
+            "type": "fixedValue",
+            "value": "uniform 0.01"
+          },
+          "outlet": {
+            "type": "fixedValue",
+            "value": "uniform 0.01"
+          },
+          "farfield": {
+            "type": "fixedValue",
+            "value": "uniform 0.01"
+          },
+          "aircraft": {
+            "type": "kqRWallFunction",
+            "value": "uniform 0.01"
+          },
+          "symmetry": {
+            "type": "symmetryPlane",
+            "value": ""
+          }
+        },
+        "omega": {
+          "inlet": {
+            "type": "fixedValue",
+            "value": "uniform 1"
+          },
+          "outlet": {
+            "type": "fixedValue",
+            "value": "uniform 1"
+          },
+          "farfield": {
+            "type": "fixedValue",
+            "value": "uniform 1"
+          },
+          "aircraft": {
+            "type": "omegaWallFunction",
+            "value": "uniform 1"
+          },
+          "symmetry": {
+            "type": "symmetryPlane",
+            "value": ""
+          }
+        },
+        "nut": {
+          "inlet": {
+            "type": "calculated",
+            "value": "uniform 0"
+          },
+          "outlet": {
+            "type": "calculated",
+            "value": "uniform 0"
+          },
+          "farfield": {
+            "type": "calculated",
+            "value": "uniform 0"
+          },
+          "aircraft": {
+            "type": "nutkWallFunction",
+            "value": "uniform 0"
+          },
+          "symmetry": {
+            "type": "symmetryPlane",
+            "value": ""
+          }
+        }
+      },
+      "active_field": "U",
+      "workflow": "simpleFoam"
+    },
+    "simulation": {
+      "start_time": 0.0,
+      "end_time": 1000.0,
+      "delta_t": 1.0,
+      "write_interval": 100.0,
+      "purge_write": 0,
+      "pseudo_transient": false,
+      "use_parallel": true,
+      "mpi_cores": 4
+    },
+    "numerics": {
+      "fv_schemes_preset": "bounded steady RANS",
+      "fv_solution_preset": "SIMPLE-RANS",
+      "turbulence_model": "kOmegaSST",
+      "fv_schemes": {
+        "ddt_default": "steadyState",
+        "grad_default": "Gauss linear",
+        "div_phi_u": "bounded Gauss upwind",
+        "div_phi_turb": "bounded Gauss upwind",
+        "div_nu_eff_dev2": "Gauss linear",
+        "laplacian_default": "Gauss linear corrected",
+        "interpolation_default": "linear",
+        "sn_grad_default": "corrected",
+        "wall_dist_method": "meshWave"
+      },
+      "fv_solution": {
+        "p_solver": "GAMG",
+        "p_smoother": "GaussSeidel",
+        "p_preconditioner": "DIC",
+        "p_rel_tol": 0.01,
+        "u_solver": "smoothSolver",
+        "u_smoother": "symGaussSeidel",
+        "u_preconditioner": "DILU",
+        "u_rel_tol": 0.1,
+        "simple_n_non_ortho": 0,
+        "simple_consistent": false,
+        "residual_control_p": 1e-05,
+        "residual_control_u": 1e-05
+      },
+      "u_solver_tol": 1e-06,
+      "p_solver_tol": 1e-06,
+      "u_relax": 0.7,
+      "p_relax": 0.3,
+      "simple_residual_control": 1e-05
+    },
+    "export": {
+      "output_path": "",
+      "last_exported_at": "",
+      "last_action": "",
+      "generated_files": []
+    },
+    "scripts": {
+      "write_helper_scripts": true,
+      "allrun": "Allrun",
+      "allclean": "Allclean",
+      "allrun_bat": "Allrun.bat",
+      "allclean_bat": "Allclean.bat",
+      "include_surface_feature_extract": true
+    },
+    "post_process": {
+      "case_dir": "",
+      "latest_time": "",
+      "available_fields": [],
+      "stage_logs": {},
+      "updated_at": "",
+      "vtk_status": "VTK: not exported",
+      "paraview_path": ""
+    },
+    "execution": {
+      "case_dir": "",
+      "status": "idle",
+      "active_stage": "none",
+      "last_run_started_at": "",
+      "last_run_finished_at": "",
+      "last_error": "",
+      "last_logs": {},
+      "results": {},
+      "windows_bootstrap": ""
+    }
+  }
+}

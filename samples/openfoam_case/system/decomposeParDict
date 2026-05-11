@@ -1,0 +1,26 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      decomposeParDict;
+}
+
+numberOfSubdomains  4;
+
+method      hierarchical;
+distributor     ptscotch;
+// distributor     zoltan;
+// libs            ("libzoltanDecomp.so");
+
+hierarchicalCoeffs
+{
+    n               (1 2 2);
+    order           xyz;
+}
+
+zoltanCoeffs
+{
+    lb_method       hypergraph;
+    lb_approach     partition;
+}
